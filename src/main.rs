@@ -74,7 +74,7 @@ async fn persist_problem_data(year: u16, day: usize, input: String) {
     let raw_input = input.as_bytes();
 
     let mut target_path = home_dir().expect("couldn't find home directory");
-    target_path.push("AdventOfCode_test");
+    target_path.push("AdventOfCode");
     target_path.push(year.to_string());
     target_path.push(format!("day{:02}", day));
     fs::create_dir_all(&target_path).await.expect("unable to crate directory");
